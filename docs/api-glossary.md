@@ -16,3 +16,16 @@ A set of records with the same **ref** is called an **entity**.
 A **type** is a specification of how the value of a records is to be interpreted. A type is defined by a **schema record**. The schema record defines how to validate records of this type, and how this record is indexed.
 
 An **file record** is a record that describes a file stored in a island and has **type:** 'file'.
+
+```javascript
+const fileRecord = {
+    type: 'file',
+    ref: 'c8a9sjchja7sdfao8s8d7faos',
+    value: {
+        filename: 'foo.jpg',
+        mimetype: 'image/jpeg',
+        contentUrl: 'hyper://keyofdrive/path/to/foo.jpg'
+    }
+}
+db.put(fileRecord)
+```

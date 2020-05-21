@@ -10,7 +10,7 @@ module.exports = {
     ],
     API: [
       'api-client',
-      'schema'
+      'schema',
       'api-glossary'
     ]
   },

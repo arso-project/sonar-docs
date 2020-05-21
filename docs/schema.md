@@ -94,4 +94,4 @@ const schema = {
 }
 ```
 
-The `index` property of each field controls how content is indexed into the secondary indexes.
+The `index` property of each field controls how content is indexed into the secondary indexes that are mounted on the island.

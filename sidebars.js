@@ -11,6 +11,7 @@ module.exports = {
     API: [
       'api-client',
       'schema'
+      'api-glossary'
     ]
   },
 };

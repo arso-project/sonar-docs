@@ -42,7 +42,7 @@ const record = await db.get({ ref, type: 'article' })
 
 ```
 
-An **file record** is a record that describes a file stored in a island and has **type** `sonarfile`.
+An **file record** is a record that describes a file stored in a island and has **type** `sonar.file`.
 
 ```javascript
 const fileRecord = {

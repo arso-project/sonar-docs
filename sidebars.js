@@ -9,6 +9,7 @@ module.exports = {
       'tantivy'
     ],
     API: [
+      'api-client',
       'schema'
     ]
   },

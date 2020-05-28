@@ -32,20 +32,20 @@ island.key
 island.info
 
 // DB
-await island.db.put()
-await island.db.get()
-await island.db.del()
-await island.db.query()
-await island.db.subscribe(name, opts, callback)
+await island.put()
+await island.get()
+await island.del()
+await island.query()
+await island.subscribe(name, opts, callback)
+await island.putSchema()
+await island.delSchema()
 
 // Feeds
-await island.feeds.put(key, opts)
+await island.feeds.add(key, opts)
 await island.feeds.del(key)
 await island.feeds.list()
 
 // Schema
-await island.schema.init()
-await island.schema.put()
 island.schema.get(nameOrRecord)
 island.schema.fields(record)
 island.schema.validate(record)

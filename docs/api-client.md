@@ -36,7 +36,7 @@ island.info
 await island.put()
 await island.get()
 await island.del()
-await island.query()
+await island.query(name, args, opts)
 // Island: Subscriptions
 await island.subscribe(name, opts, callback)
 // Island: Schemas

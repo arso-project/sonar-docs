@@ -1,5 +1,5 @@
 ---
-id: schema
+id: api-schema
 title: Data model and Schema
 ---
 

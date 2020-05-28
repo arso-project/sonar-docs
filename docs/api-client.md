@@ -27,29 +27,25 @@ const client = new Client(opts)
 ```javascript
 const island = await client.createIsland(name, opts)
 const island = await client.island(keyOrName)
+await client.listIslands)
 
 island.key
 island.info
 
-// DB
+// Island: Database
 await island.put()
 await island.get()
 await island.del()
 await island.query()
+// Island: Subscriptions
 await island.subscribe(name, opts, callback)
+// Island: Schemas
 await island.putSchema()
 await island.delSchema()
-
-// Feeds
-await island.feeds.add(key, opts)
-await island.feeds.del(key)
-await island.feeds.list()
-
-// Schema
-island.schema.get(nameOrRecord)
-island.schema.fields(record)
-island.schema.validate(record)
-island.schema.map(record, targetSchema)
+// Island: Feeds
+await island.addFeed()
+await island.delFeed()
+await island.listFeeds()
 
 // FS
 await island.fs.readFile(refOrPath)
@@ -58,4 +54,12 @@ await island.fs.createReadStream(refOrPath)
 await island.fs.createWriteStream(refOrPath)
 await island.fs.stat(refOrPath)
 await island.fs.resolveURL(refOrPath)
+
+
+// Schema
+island.schema.fields(record)
+island.schema.validate(record)
+island.schema.map(record, targetSchema)
+island.schema.list()
+island.schema.get()
 ```

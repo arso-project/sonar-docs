@@ -57,4 +57,5 @@ await island.fs.writeFile(refOrPath)
 await island.fs.createReadStream(refOrPath)
 await island.fs.createWriteStream(refOrPath)
 await island.fs.stat(refOrPath)
+await island.fs.resolveURL(refOrPath)
 ```

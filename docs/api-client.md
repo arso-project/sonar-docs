@@ -24,6 +24,10 @@ const client = new Client(opts)
 
 ### API
 
+**The current API is documented in the [README of sonar-client](https://github.com/arso-project/sonar/blob/master/sonar-client/README.md)**
+
+*This is a draft page for the revised client API. It is not yet complete*.
+
 ```javascript
 const island = await client.createIsland(name, opts)
 const island = await client.island(keyOrName)

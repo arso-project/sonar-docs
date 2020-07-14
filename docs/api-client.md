@@ -29,41 +29,41 @@ const client = new Client(opts)
 *This is a draft page for the revised client API. It is not yet complete*.
 
 ```javascript
-const island = await client.createIsland(name, opts)
-const island = await client.island(keyOrName)
+const collection = await client.createIsland(name, opts)
+const collection = await client.collection(keyOrName)
 await client.listIslands)
 
-island.key
-island.info
+collection.key
+collection.info
 
 // Island: Database
-await island.put()
-await island.get()
-await island.del()
-await island.query(name, args, opts)
+await collection.put()
+await collection.get()
+await collection.del()
+await collection.query(name, args, opts)
 // Island: Subscriptions
-await island.subscribe(name, opts, callback)
+await collection.subscribe(name, opts, callback)
 // Island: Schemas
-await island.putSchema()
-await island.delSchema()
+await collection.putSchema()
+await collection.delSchema()
 // Island: Feeds
-await island.addFeed()
-await island.delFeed()
-await island.listFeeds()
+await collection.addFeed()
+await collection.delFeed()
+await collection.listFeeds()
 
 // FS
-await island.fs.readFile(refOrPath)
-await island.fs.writeFile(refOrPath)
-await island.fs.createReadStream(refOrPath)
-await island.fs.createWriteStream(refOrPath)
-await island.fs.stat(refOrPath)
-await island.fs.resolveURL(refOrPath)
+await collection.fs.readFile(refOrPath)
+await collection.fs.writeFile(refOrPath)
+await collection.fs.createReadStream(refOrPath)
+await collection.fs.createWriteStream(refOrPath)
+await collection.fs.stat(refOrPath)
+await collection.fs.resolveURL(refOrPath)
 
 
 // Schema
-island.schema.fields(record)
-island.schema.validate(record)
-island.schema.map(record, targetSchema)
-island.schema.list()
-island.schema.get()
+collection.schema.fields(record)
+collection.schema.validate(record)
+collection.schema.map(record, targetSchema)
+collection.schema.list()
+collection.schema.get()
 ```

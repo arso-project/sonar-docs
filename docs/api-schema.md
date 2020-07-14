@@ -35,9 +35,8 @@ When getting Sonar records from the database, they are upcasted into `Record` ob
 
 ## Defining schema
 
-A schema is an object describing the fields this content type has. It supports the basic JSON types (`string`, `boolean`, `number`, `object`) plus the following additional types:
+A schema is an object describing the fields this content type has. 
 
-indexing options der fields und des schemas
 
 ### Type props
 
@@ -50,10 +49,11 @@ Every type has a derived `address` property that has to be unique per collection
 * `refines: string`: Type address of a parent type. This means this type inherits all fields and props of it's parent. It is considered to be a subclass of its parent for queries and indexing.
 
 
-## Field types
+### Field types
 
 Sonar supports the basic JSON types: `string`, `number`, `boolean`. `object` and `array` are supported, but cannot be indexed at the moment. Additionally, there are types that bring default indexing strategies with them:
 
+* `float`, `uint`, `int`: These types behave like `number` in JavaScript, but are validated and may lead to different indexing strategies for view.
 * `relation`: Relation fields have these default props: `{ search: { facet: true } }` and a basic relation index (in `sonar-view-relation`) indexes all relations in a quadstore. The value has to be a valid Sonar entity ID.
 
     > TODO: We also want to support a `idPrefix` prop, and maybe a way to reference not entity IDs, but specific Record versions.
@@ -75,19 +75,27 @@ Additionally, a number of JSON Schema props and extensions are supported to vari
 
 Every field has a derived `address` property of the format `namespace/name@version#fieldname`
 
-### Indexing props
+#### Indexing props
+
 Each field can have an `index` property object. The keys are the names of indexing engines. The value differs per indexing engine.
 
-#### `search`
+Indexing props can also be set on a type. If set on the type, these props are the default for all fields of this type.
+
+##### `search`
 
 The `search` view uses [sonar-tantivy](https://github.com/arso-project/sonar-tantivy/) to create a full-text search index.
 
 *Field-level props*
 
+* `indexed: false` Index this field in the search index. 
+* `record: basic|freq|position`: Index only the entity ID (`basic`), term frequenceies (`freq`) or term frequencies and term positions (`position`) (Default: `position`) *Applies only to `string` and `text` fields*
 * `facet: false` Index this field as a facet field (so it can be filtered on in queries)
-* `field: true` Index this field as a seperate, normal field. The Tantivy field type is derived from the Sonar field type *(TODO: Document the map from Sonar to Tantivy field types)*
-* `bodytext: false`: Index this field, stringified, into the `body` field of the search index.
+* `tokenizer: 'default'`: Set the tokenizer for this field. Valid values are `default`, `de/DE`, `en/US`, etc *(TODO: Link to list of available tokenizers)*
+* `fastfield: false`: Index as fast field (number fields only)
+* `body: true`: Index this field, stringified, into the `body` field of the search index.
 * `title: false`: Index this field into the `title` field of the search index.
+
+The Tantivy field type is derived from the Sonar field type *(TODO: Document the map from Sonar to Tantivy field types)*.
 
 ### Example A simple schema definition looks like this:
 

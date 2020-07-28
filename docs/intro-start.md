@@ -7,7 +7,7 @@ Sonar is an open source framework to manage, annotate, and full-text search thro
 
 ## What can Sonar be used for?
 
-We imagine a wide range of use cases for Sonar, it is a framework that provides the tools you can use to build upon. Some use cases we explored include: Searchable and replicable media archives, blogs, archiving and searching of chat logs.
+We imagine a wide range of use cases for Sonar, it is a framework that provides the tools you can use to build upon. Some use cases we explored include: Searchable and replicable media archives, research databases, blogs, archiving and searching of chat logs.
 
 ## How to run Sonar
 

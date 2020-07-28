@@ -24,46 +24,41 @@ const client = new Client(opts)
 
 ### API
 
-**The current API is documented in the [README of sonar-client](https://github.com/arso-project/sonar/blob/master/sonar-client/README.md)**
+**The current API is documented in the [API docs](https://sonar-apidocs.dev.arso.xyz)**
 
 *This is a draft page for the revised client API. It is not yet complete*.
 
 ```javascript
-const collection = await client.createIsland(name, opts)
+const collection = await client.createCollection(name, opts)
 const collection = await client.collection(keyOrName)
-await client.listIslands)
+await client.listCollections
 
 collection.key
 collection.info
 
-// Island: Database
+// Collection: Database
 await collection.put()
 await collection.get()
 await collection.del()
 await collection.query(name, args, opts)
-// Island: Subscriptions
+// Collection: Subscriptions
 await collection.subscribe(name, opts, callback)
-// Island: Schemas
-await collection.putSchema()
-await collection.delSchema()
-// Island: Feeds
+// Collection: Types
+await collection.putType()
+// Collection: Feeds
 await collection.addFeed()
-await collection.delFeed()
-await collection.listFeeds()
 
 // FS
 await collection.fs.readFile(refOrPath)
 await collection.fs.writeFile(refOrPath)
 await collection.fs.createReadStream(refOrPath)
 await collection.fs.createWriteStream(refOrPath)
-await collection.fs.stat(refOrPath)
+await collection.fs.statFile(refOrPath)
 await collection.fs.resolveURL(refOrPath)
 
 
 // Schema
-collection.schema.fields(record)
-collection.schema.validate(record)
-collection.schema.map(record, targetSchema)
-collection.schema.list()
-collection.schema.get()
+collection.schema.add(type)
+collection.schema.listTypes()
+collection.schema.get(name)
 ```

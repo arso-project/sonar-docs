@@ -5,7 +5,7 @@ id: api-glossary
 
 ## Concepts and their names
 
-An **island** is a set of **feeds** that are shared among **peers**.
+An **collection** is a set of **feeds** that are shared among **peers**.
 
 A **feed** is an append-only log of **records**. Each feed is only writable from a single device.
 
@@ -17,15 +17,15 @@ A **ref** is a unique string that identifies an **entity** - a set of records th
 
 A **type** is a string that defines how to understand the value of records with this type. Types are stored in Sonar as records of type `sonar.schema`. The schema describes how to validate, index, and display records of this type.
 * If a type contain a dot, the type name is considered to be well-defined. That means they are usually part of the source code of an app or a bot. They should be namespaced by org and/or project name to avoid conflicts.
-* If a type does not contain a dot, it will internally be prefixed with the *island key*.
+* If a type does not contain a dot, it will internally be prefixed with the *collection key*.
 * A type is versioned. When creating new records, the current version is appended to the type.
 
-After being saved, a record also has a **version** property, identifying the storage location of this particular version of the record. It also has an **lseq** property, which is this record version's sequence number in the local island log.
+After being saved, a record also has a **version** property, identifying the storage location of this particular version of the record. It also has an **lseq** property, which is this record version's sequence number in the local collection log.
 
 Example:
 
 ```javascript
-// We're on island with key d78a7e3a.
+// We're on collection with key d78a7e3a.
 const ref = await db.put({
     type: 'article',
     value: { title: 'Hello world' }
@@ -42,7 +42,7 @@ const record = await db.get({ ref, type: 'article' })
 
 ```
 
-An **file record** is a record that describes a file stored in a island and has **type** `sonar.file`.
+An **file record** is a record that describes a file stored in a collection and has **type** `sonar.file`.
 
 ```javascript
 const fileRecord = {

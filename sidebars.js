@@ -7,7 +7,7 @@ module.exports = {
       'hyperstack',
       'kappa',
       'tantivy',
-      'sonar-architecture',
+      'architecture-sonar',
     ],
     Generated: [
       'apidocs-client'

@@ -6,7 +6,12 @@ module.exports = {
     Architecture: [
       'hyperstack',
       'kappa',
-      'tantivy'
+      'tantivy',
+      'sonar-core',
+      'collection'
+    ],
+    Generated: [
+      'apidocs-client'
     ],
     API: [
       'api-client',

@@ -7,9 +7,9 @@ module.exports = {
       'hyperstack',
       'kappa',
       'tantivy',
-      'architecture-sonar',
+      'architecture-sonar'
     ],
-    Generated: [
+    'API docs': [
       'apidocs-client'
     ],
     API: [
@@ -17,5 +17,5 @@ module.exports = {
       'api-schema',
       'api-glossary'
     ]
-  },
-};
+  }
+}

@@ -7,7 +7,7 @@ The usual setup is that you run sonar-server on localhost and then interact with
 
 ## Installation
 
-```sh
+```bash
 npm install -g @arsonar/server
 sonar help
 sonar start
@@ -17,7 +17,7 @@ sonar start
 
 > Note: At the moment [yarn 1](https://classic.yarnpkg.com/) is recommended, please [install it according to the instructions](https://classic.yarnpkg.com/en/docs/install#debian-stable).
 
-```sh
+```bash
 # clone the sonar repository
 git clone https://github.com/arso-project/sonar.git
 cd sonar
@@ -44,7 +44,7 @@ If the start fails with errors related to `client`, try to rebuild client :
 yarn run build:client
 ```
 
-```sh
+```bash
 # start the sonar server
 ./sonar start
 
@@ -57,7 +57,7 @@ yarn run build:client
 
 This repo includes a few examples. To run them locally, do the following:
 
-```sh
+```bash
 # build the client library
 yarn build:client
 # start sonar

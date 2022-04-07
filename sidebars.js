@@ -6,9 +6,9 @@ module.exports = {
     Guides: [
       'guides/runServer',
       'guides/workspace',
-      'guides/filesystem',
       'guides/collections',
-      'guides/handleData',
+      'guides/fileRecord',
+      'guides/schemaRecord',
       'guides/search'
     ],
     Architecture: [

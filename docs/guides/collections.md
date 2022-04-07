@@ -10,7 +10,7 @@ A record is a unit of data. Each record has a type, a ref and a value.
 
 When sonar is started a local collection is available by default.
 
-Collections sind einem Workspace zugeordnet.
+Collections are assigned to a workspace. You can learn how to create a workspace in the workspace guide..
 
 
 ## add or open collection
@@ -38,9 +38,20 @@ export async function Collection(): Promise<Collection> {
 ```
 
 ## delete a collection
-????
+Currently it is not possible to delete a collection, maybe we will enable this in the future.
 
-## getters
+## list collections and get further informations
+
+
+To list the collections in a workspace and get more information about them you can use the following functions:
+
+``` js
+await workspace.listCollections
+collection.key
+collection.info
+```
+
+### getters
 
 Various getters are available to retrieve the parameters of the collection:
 
@@ -66,3 +77,7 @@ Various getters are available to retrieve the parameters of the collection:
     return this._length || this._info.length || 0
   }
 ```
+
+## more about collections
+
+Collections manage our feeds these can have different forms on the one hand you can add simple files to the collections so called `file records` on the other hand you can also manage your databases in a collection with the so called `record scheme`. Furthermore you can share your feeds with others or replicate them, more about this in the corresponding guides.

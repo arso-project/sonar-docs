@@ -6,11 +6,16 @@ If you start Sonar it comes with a Default Workspace
 
 When you start Sonar it provides a default workspace. Workspaces are our endpoints in which collections can be managed, more about this under the point Collections.
 
-There can be multiple workspaces on one Sonar server.
+There can be multiple workspaces on one Sonar server but in alpha state you should use only the default workspace.
 
-To create a new workspace you have to pass token and URL of the server for example like this in JavaScript:
+To use the workspace it must be added to the project:
+
+```npm install @arso-project/sonar-client```
+
+Afterwards this can be impoted and created via the constructor:
 
 ```js
+import { Workspace } from "@arsonar/client";
 /**
  * Get the URL and access token for 
  * the Sonar instance running in the background. 
@@ -27,3 +32,5 @@ export const workspace = new Workspace({
 ```
 
 Now you can create, update, open and display collections on the workspace. Furthermore the workspace offers the possibility to manage the login of the client. More about the workspace can be found in the API description: [Workspace](https://sonar-apidocs.dev.arso.xyz/Workspace.html)
+
+How to create collections and so on you can find in the collection guide.

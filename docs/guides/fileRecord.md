@@ -1,5 +1,5 @@
 ---
-title: file record
+title: file records
 id: fileRecord
 ---
 

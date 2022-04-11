@@ -1,5 +1,5 @@
 ---
-title: Workspace
+title: workspaces
 id: workspace
 ---
 If you start Sonar it comes with a Default Workspace 

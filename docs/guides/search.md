@@ -1,5 +1,5 @@
 ---
-title: Search
+title: searching
 id: search
 ---
 

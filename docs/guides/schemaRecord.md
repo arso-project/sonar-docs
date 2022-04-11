@@ -1,5 +1,5 @@
 ---
-title: schema record
+title: schema records
 id: schemaRecord
 ---
 Since we understand sonar as a p2p database you can freely define a schema in which you can store your information.

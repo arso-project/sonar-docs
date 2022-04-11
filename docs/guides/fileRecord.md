@@ -13,3 +13,5 @@ await collection.fs.createWriteStream(refOrPath)
 await collection.fs.statFile(refOrPath)
 await collection.fs.resolveURL(refOrPath)
 ```
+
+Currently it is not possible to delete a records for real. When a record is deleted, it receives a tombstone to show other peers that it is no longer available.

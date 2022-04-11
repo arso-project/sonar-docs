@@ -7,8 +7,10 @@ module.exports = {
       'guides/runServer',
       'guides/workspace',
       'guides/collections',
+      'guides/feeds',
       'guides/fileRecord',
       'guides/schemaRecord',
+      'guides/sharing',
       'guides/search'
     ],
     Architecture: [

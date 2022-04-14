@@ -1,5 +1,5 @@
 ---
-title: runing a server
+title: running a server
 id: runServer
 ---
 

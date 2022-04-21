@@ -15,7 +15,7 @@ Collections are assigned to a workspace. You can learn how to create a workspace
 
 ## add or open collection
 
-To add a new collection to the workspace we simply call the ``createCollection()``` function to open it we use ``openCollection()``` as for example in this code snippet:
+To add a new collection to the workspace we simply call the ```createCollection()``` function to open it we use ```openCollection()``` as for example in this code snippet:
 
 
 ```js
@@ -77,6 +77,10 @@ Various getters are available to retrieve the parameters of the collection:
     return this._length || this._info.length || 0
   }
 ```
+
+## update a collection
+
+To update a collection configuration you can use ```updateCollection(name, info)```
 
 ## more about collections
 

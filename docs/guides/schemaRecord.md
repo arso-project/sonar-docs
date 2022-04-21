@@ -51,3 +51,11 @@ const spec = {
   }
 }
 ```
+
+## add new schema
+
+To add a new schema to a collection you need the function:
+
+``` js
+await collection.putType(schema)
+```

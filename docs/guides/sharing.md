@@ -2,6 +2,12 @@
 title: sharing
 id: sharing
 ---
+With the function ```putFeeds()``` you can add feeds from other collections, which allows you to share them.
+
+``` js
+// Collection: Feeds
+await collection.putFeed()
+```
 
 If you know the key of a collection you can add it by using the subscribe mechanism.
 

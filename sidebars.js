@@ -3,19 +3,29 @@ module.exports = {
     'Getting started': [
       'intro-start'
     ],
+    Guides: [
+      'guides/runServer',
+      'guides/workspace',
+      'guides/collections',
+      'guides/feeds',
+      'guides/fileRecord',
+      'guides/schemaRecord',
+      'guides/sharing',
+      'guides/search'
+    ],
     Architecture: [
-      'hyperstack',
-      'kappa',
-      'tantivy',
-      'architecture-sonar'
+      'architecture/hyperstack',
+      'architecture/kappa',
+      'architecture/tantivy',
+      'architecture/architecture-sonar'
     ],
     'API docs': [
-      'apidocs-client'
+      'apiDocs/apidocs-client'
     ],
     API: [
-      'api-client',
-      'api-schema',
-      'api-glossary'
+      'api/api-client',
+      'api/api-schema',
+      'api/api-glossary'
     ]
   }
 }

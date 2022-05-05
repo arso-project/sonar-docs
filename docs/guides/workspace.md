@@ -11,6 +11,7 @@ There can be multiple workspaces on one Sonar server.
 To create a new workspace you have to pass token and URL of the server for example like this in JavaScript:
 
 ```js
+import { Workspace } from '@arsonar/client'
 /**
  * Get the URL and access token for 
  * the Sonar instance running in the background. 

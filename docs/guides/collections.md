@@ -8,12 +8,10 @@ An collection is a set of feeds that are shared among peers.
 A feed is an append-only log of records. Each feed is only writable from a single device.
 A record is a unit of data. Each record has a type, a ref and a value.
 
-When sonar is started a local collection is available by default.
-
-Collections sind einem Workspace zugeordnet.
+Collections are always part of a Workspace.
 
 
-## add or open collection
+## Add or open collection
 
 To add a new collection to the workspace we simply call the ``createCollection()``` function to open it we use ``openCollection()``` as for example in this code snippet:
 
@@ -37,32 +35,20 @@ export async function Collection(): Promise<Collection> {
 }
 ```
 
-## delete a collection
-????
-
-## getters
+## Collection prooperties
 
 Various getters are available to retrieve the parameters of the collection:
 
+* `collection.key` is the hex-encoded *primary key* of the collection. Sharing this key gives *read access* to the collection.
 
-```js
-  get name () {
-    if (this._info) return this._info.name
-    return this._nameOrKey
-  }
-  get key () {
-    return this._info && this._info.key
-  }
-  get localKey () {
-    return this._info && this._info.localKey
-  }
-  get info () {
-    return this._info
-  }
-  get id () {
-    return this._info && this._info.id
-  }
-  get length () {
-    return this._length || this._info.length || 0
-  }
-```
+* `collection.info` contains a list of the feeds and other status information.
+
+* `collection.length` is the number of records in this collection.
+
+## Database
+
+Each collection forms a database of `Record`s. A record is a mutable, versioned record of data. Each record has a type, a unique ID and a JSON value. Through its type, a record is associated with a type schema.
+
+Records are created through `collection.put()` and read through `collection.get()` and `collection.query()`.
+
+See the <a href="/apidocs-client/classes/Collection.html" target="_blank">API docs</a> for the supported parameters and additional methods.

@@ -1,7 +1,9 @@
 ---
-title: Filesystem
-id: filesystem
+title: Files
+id: files
 ---
+
+Each Sonar collection has a 
 
 In order to add files to our collection we need a tile system to manage this.
 

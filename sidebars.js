@@ -1,14 +1,11 @@
 module.exports = {
   someSidebar: {
-    'Getting started': [
-      'intro-start'
-    ],
+    'Getting started': ['intro-start'],
     Guides: [
       'guides/runServer',
       'guides/workspace',
-      'guides/filesystem',
       'guides/collections',
-      'guides/handleData',
+      'guides/files',
       'guides/search'
     ],
     Architecture: [
@@ -17,13 +14,7 @@ module.exports = {
       'architecture/tantivy',
       'architecture/architecture-sonar'
     ],
-    'API docs': [
-      'apiDocs/apidocs-client'
-    ],
-    API: [
-      'api/api-client',
-      'api/api-schema',
-      'api/api-glossary'
-    ]
+    'API docs': ['apiDocs/apidocs-client'],
+    API: ['api/api-client', 'api/api-schema', 'api/api-glossary']
   }
 }

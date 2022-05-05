@@ -1,3 +1,4 @@
+const p = require('path')
 module.exports = {
   title: 'Sonar',
   tagline: 'A peer to peer database and search engine',
@@ -9,7 +10,7 @@ module.exports = {
   themeConfig: {
     prism: {
       theme: require('prism-react-renderer/themes/github'),
-      darkTheme: require('prism-react-renderer/themes/dracula'),
+      darkTheme: require('prism-react-renderer/themes/dracula')
     },
     navbar: {
       title: 'Sonar',
@@ -17,20 +18,25 @@ module.exports = {
       //   alt: 'My Site Logo',
       //   src: 'img/logo.svg',
       // },
-      links: [
+      items: [
         {
-          to: 'docs/',
+          to: 'docs/intro-start',
           activeBasePath: 'docs',
           label: 'Docs',
-          position: 'left',
+          position: 'left'
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          to: 'api',
+          label: 'API',
+          position: 'left'
+        },
+        { to: 'blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/arso-project/sonar',
           label: 'Github',
-          position: 'right',
-        },
-      ],
+          position: 'right'
+        }
+      ]
     },
     footer: {
       style: 'dark',
@@ -79,8 +85,8 @@ module.exports = {
         //   ],
         // },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} arso collective`,
-    },
+      copyright: `Copyright © ${new Date().getFullYear()} arso collective`
+    }
   },
   presets: [
     [
@@ -88,22 +94,54 @@ module.exports = {
       {
         docs: {
           // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: 'intro-start',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/arso-project/sonar-docs/edit/master/',
+          editUrl: 'https://github.com/arso-project/sonar-docs/edit/master/'
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/arso-project/sonar-docs/edit/master/blog/',
+            'https://github.com/arso-project/sonar-docs/edit/master/blog/'
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
+          customCss: require.resolve('./src/css/custom.css')
+        }
+      }
+    ]
   ],
-};
+  plugins: [
+    // [
+    //   'docusaurus-plugin-typedoc-api',
+    //   {
+    //     minimal: false,
+    //     typedocOptions: {
+    //       logLevel: 'Verbose',
+    //       excludePrivate: true
+    //     },
+    //     // projectRoot: p.join(__dirname, '..', 'sonar'),
+    //     // exclude: ['**/examples/**', '**/dist/**'],
+    //     // packages: [
+    //     //   { path: 'packages/client', entry: 'index.ts' },
+    //     //   { path: 'packages/react', entry: 'index.ts' }
+    //     // ]
+    //     projectRoot: p.join(__dirname, '..', 'sonar'),
+    //     packages: ['packages/client'],
+    //     // packages: [
+    //     //   {
+    //     //     path: '.',
+    //     //     entry: 'index.ts',
+    //     //     label: 'Client'
+    //     //   }
+    //     // ],
+    //     // Monorepo
+    //     // packages: ['packages/client'],
+    //     // Polyrepo
+    //     // packages: [
+    //     //   { path: 'packages/client', entry: 'index.ts' },
+    //     //   { path: 'packages/react', entry: 'index.ts' }
+    //     // ],
+    //   }
+    // ]
+  ]
+}

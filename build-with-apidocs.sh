@@ -16,6 +16,7 @@ yarn
 yarn docs:client
 popd
 popd
-mv tmp/sonar/packages/client/docs static/apidocs-client
+
+rm -r static/apidocs-client || true
+cp -r tmp/sonar/packages/client/docs static/apidocs-client
 yarn build
-rm -r tmp

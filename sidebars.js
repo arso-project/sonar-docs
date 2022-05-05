@@ -1,20 +1,21 @@
 module.exports = {
-  someSidebar: {
-    'Getting started': ['intro-start'],
-    Guides: [
+  sidebar: [
+    'intro-start',
+    { type: 'category', label: 'Guides', items: [
       'guides/runServer',
       'guides/workspace',
       'guides/collections',
       'guides/files',
       'guides/search'
-    ],
-    Architecture: [
+    ]},
+    { type: 'category', label: 'Architecture', items: [
       'architecture/hyperstack',
       'architecture/kappa',
       'architecture/tantivy',
       'architecture/architecture-sonar'
-    ],
-    'API docs': ['apiDocs/apidocs-client'],
-    API: ['api/api-client', 'api/api-schema', 'api/api-glossary']
-  }
+    ]},
+    { type: 'category', label: 'API', items: [
+      'api/api-client', 'api/api-schema', 'api/api-glossary'
+    ]}
+  ]
 }

@@ -20,15 +20,15 @@ module.exports = {
       // },
       items: [
         {
-          to: 'docs/intro-start',
+          to: 'docs',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left'
         },
         {
-          to: 'api',
-          label: 'API',
-          position: 'left'
+          href: '/apidocs-client',
+          target: '_blank',
+          label: 'Client API docs'
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {

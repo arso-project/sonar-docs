@@ -1,6 +1,7 @@
 ---
 title: Getting started
 id: intro-start
+slug: /
 ---
 
 Sonar is an open source framework to manage, annotate, and full-text search through data including media files. It uses peer-to-peer technology to replicate and share collections. Sonar can be used to easily develop decentralized applications.

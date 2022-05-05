@@ -6,6 +6,8 @@ title: Client
 
 The primary way to interact with Sonar is through the *Sonar Client*. The Client talks to the Sonar daemon over HTTP. The Sonar daemon is part of the P2P network, exchanges data with other peers and indexes the data in your islands.
 
+**<a href="/apidocs-client" target="_blank">API docs for the client</a>**
+
 ## Get started
 
 The client works both in browsers and in NodeJS. When using in browser, you currently need to have a bundling setup that supports CommonJS (e.g. webpack or browserify).

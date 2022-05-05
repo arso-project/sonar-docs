@@ -1,10 +1,9 @@
 ---
-id: hello-world
+slug: hello-world
 title: Hello
 author: arso-project
 author_title: coop
 author_url: https://github.com/arso-project
-author_image_url: 
 tags: [hello, sonar]
 ---
 
